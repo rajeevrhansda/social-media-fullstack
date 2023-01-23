@@ -1,7 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch("https://social-media-fullstack.onrender.com/")
+      .then((response) => {
+        return response.json();
+      })
+      .then((response)=> console.log(response))
+      .catch((error) => console.log("error", error));
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
