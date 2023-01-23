@@ -3,10 +3,10 @@ const dotenv = require("dotenv");
 const cors = require('cors');
 dotenv.config();
 const app = express();
-// app.use(cors())
-app.use(cors({
-    origin: 'https://social-media-fullstack.netlify.app/'
-}));
+app.use(cors())
+// app.use(cors({
+//     origin: 'https://social-media-fullstack.netlify.app/'
+// }));
 const PORT = process.env.PORT || 5000;
 
 
